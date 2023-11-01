@@ -36,4 +36,12 @@ public void testInsert() {
 	
 	log.info(board);
 }
+
+@Test
+public void testRead() {
+	// exist number of post
+	BoardVO b = mapper.read(2L);
+	
+	log.info(b);
+}
 }

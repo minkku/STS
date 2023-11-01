@@ -36,4 +36,8 @@
 			#{writer}
 		)
 	</insert>
+	
+	<select id="read" resultType="org.zerock.domain.BoardVO">
+		SELECT * FROM tb1_board WHERE id = #{id}
+	</select>
 </mapper>
