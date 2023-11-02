@@ -40,4 +40,19 @@
 	<select id="read" resultType="org.zerock.domain.BoardVO">
 		SELECT * FROM tb1_board WHERE id = #{id}
 	</select>
+	
+	<update id="update">
+		UPDATE tb1_board
+		SET
+			title = #{title},
+			content = #{content},
+			writer = #{writer},
+			updateDate = now()
+		WHERE
+			id = #{id}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM tb1_board WHERE id = #{id}
+	</delete>
 </mapper>
