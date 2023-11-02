@@ -5,7 +5,7 @@
 <mapper namespace="org.zerock.mapper.BoardMapper">
 	<select id = "getList" resultType = "org.zerock.domain.BoardVO">
 		<![CDATA[
-			SELECT * FROM tb1_board WHERE id < 0
+			SELECT * FROM tb1_board WHERE id > 0
 		]]>
 	</select>
 	
