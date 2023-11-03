@@ -49,7 +49,7 @@ public void testRead() {
 public void testUpdate() {
 	BoardVO b = new BoardVO();
 	// 실행전 존재하는 번호인지 확인
-	b.setId(1L);
+	b.setId(13L);
 	b.setTitle("수정된 제목");
 	b.setContent("수정된 내용");
 	b.setWriter("user00");
