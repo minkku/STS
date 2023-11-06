@@ -20,3 +20,25 @@ $(document).ready(function() {
 				self.location = "/board/register";
 		});
 });
+
+$(document).ready(function() {
+		var formObj = $("form");
+		
+		$('button').on("click", function(e) {
+		
+		e.preventDefault();
+		
+		var operation = $(this).data("oper");
+		
+		console.log(operation);
+		
+		if(operation === 'remove') {
+			formObj.attr("action", "/board/remove");
+		} else if(operation === 'list') {
+			//move to list
+			formObj.attr("action", "/board/list").attr("method", "get");
+			formObj.empty();
+		}
+			formObj.submit();
+	});
+});
