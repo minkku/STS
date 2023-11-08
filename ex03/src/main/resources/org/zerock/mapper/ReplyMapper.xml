@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.ReplyMapper">
+	<insert id="insert">
+		INSERT INTO tbl_reply (
+			tb1_board_id,
+			reply,
+			replyer
+		) VALUES (
+			#{tb1_board_id},
+			#{reply},
+			#{replyer}			
+		)
+	</insert>
+	
+	<select id ="read" resultType="org.zerock.domain.ReplyVO">
+		SELECT * FROM tbl_reply
+		WHERE id = #{id}
+	</select>
+	
+	<update id = "update">
+		UPDATE tbl_reply
+		SET 
+			reply = #{reply},
+					updateDate = now()
+		WHERE
+			id = #{id}
+	</update>
+	
+	<delete id = "delete">
+		DELETE FROM tbl_reply
+		WHERE id = #{id}
+	</delete>
+</mapper>

@@ -3,8 +3,10 @@ $(document).ready(function() {
 	
 	checkModal(result);
 	
+	history.replaceState({}, null, null);
+	
 	function checkModal(result) {
-		if (result === '') {
+		if (result === '' || histroy.state) {
 			return;
 		}
 		
