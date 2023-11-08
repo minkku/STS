@@ -34,4 +34,19 @@
 		DELETE FROM tbl_reply
 		WHERE id = #{id}
 	</delete>
+	
+	<select id = "getListWithPaging" resultType = "org.zerock.domain.ReplyVO">
+		SELECT
+			tb1_board_id,
+			reply,
+			replyer,
+			replyDate,
+			updateDate
+		FROM
+			tbl_reply
+		WHERE
+			id = #{id}
+		ORDER BY
+			id ASC
+	</select>
 </mapper>

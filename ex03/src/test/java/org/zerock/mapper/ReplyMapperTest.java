@@ -49,7 +49,6 @@ public class ReplyMapperTest {
 		int targetId = 3;
 		
 		mapper.delete(targetId);
-		
 	}
 	
 	@Test
@@ -63,6 +62,5 @@ public class ReplyMapperTest {
 		int count = mapper.update(vo);
 		
 		log.info("UPDATE COUNT : " + count);
-		
 	}
 }
