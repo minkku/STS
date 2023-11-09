@@ -53,7 +53,7 @@ public class ReplyController {
 				return new ResponseEntity<>(sv.getList(cri, id), HttpStatus.OK);
 			}
 	
-	// ¾ÆÀÌµð °ªÀ¸·Î ´ñ±Û Á¶È¸
+	// ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È¸
 	@GetMapping(value = "/{id}",
 			produces = {MediaType.APPLICATION_XML_VALUE,
 						MediaType.APPLICATION_JSON_UTF8_VALUE})
@@ -63,7 +63,7 @@ public class ReplyController {
 		return new ResponseEntity<>(sv.get(id), HttpStatus.OK);
 	}
 	
-	// ¾ÆÀÌµð°ªÀ¸·Î ´ñ±Û »èÁ¦
+	// ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@DeleteMapping(value = "/{id}", produces = { MediaType.TEXT_PLAIN_VALUE })
 	public ResponseEntity<String> remove(@PathVariable("id") int id) {
 		log.info("remove :" + id);
@@ -73,7 +73,7 @@ public class ReplyController {
 			: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR); 
 	}
 	
-	//´ñ±Û ¼öÁ¤
+	//ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@RequestMapping(method = { RequestMethod.PATCH }, 
 			value = "/{id}",
 			consumes = "application/json",

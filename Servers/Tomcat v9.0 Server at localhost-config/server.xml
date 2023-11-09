@@ -161,7 +161,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 		
       
-      <Context docBase="ex03" path="/" reloadable="false" source="org.eclipse.jst.jee.server:ex03"/><Context docBase="testspring_1" path="/dong" reloadable="true" source="org.eclipse.jst.jee.server:testspring_1"/></Host>
+      <Context docBase="ex03" path="/" reloadable="false" source="org.eclipse.jst.jee.server:ex03"/></Host>
     </Engine>
   </Service>
 </Server>
